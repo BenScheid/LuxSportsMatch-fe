@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <link rel="stylesheet" href="../style/settings_page.css">
+    <script src="../script/settings_page.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      LSM  Settings
+    </title>
+  </head>
+  
+  <body>
+    <div class="settings-background">
+        <p class="title-settings">
+          Choose your settings
+        </p>  
+           
+        <p class="size-label">
+          Size of the board:
+        </p>
+        
+        <div class="size-possibilities">
+          <input type="radio" class="first-possibility-checkbox" name="board_size" id="44" value="4">
+          <p class="first-possibility-label">4x4</p>
+
+          <input type="radio" class="second-possibility-checkbox" name="board_size" id`="66" value="4">
+          <p class="second-possibility-label">6x6</p>
+        </div>
+
+        <p class="difficulty-label">
+          Difficulty:
+        </p>
+
+        <p>
+          <select name="Difficulties" id="difficulties" class="dropbox-difficulties">
+            <option value="1">1 (easy)</option>
+            <option value="2">2 (medium)</option>
+            <option value="3">3 (difficult)</option>
+          </select> 
+        </p>
+
+        <p>         
+          <button id="fetchDataButton">SAVE</button>
+        </p>
+    </div>
+  </body>
+</html>

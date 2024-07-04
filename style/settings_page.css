@@ -1,0 +1,104 @@
+body {
+  background-color: #1d6d86;
+  font-size: 2vh; /* Base font size set relative to viewport height */
+}
+
+.settings-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: beige;
+  width: 75%;
+  max-width: 1700px;
+  height: 75%;
+  max-height: 1700px;
+  padding: 2vh;
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: solid;
+  border-color: black;
+}
+
+.title-settings {
+  font-family: 'Times New Roman', serif;
+  font-size: 6vh; /* Font size relative to viewport height */
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
+
+.size-label, .difficulty-label {
+  font-family: 'Times New Roman', serif;
+  font-size: 4vh; /* Font size relative to viewport height */
+  font-weight: bold;
+  margin: 3vh 0;
+  align-self: flex-start;
+}
+
+.size-possibilities {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+.first-possibility-checkbox, .second-possibility-checkbox {
+  width: 4vh; /* Width and height relative to viewport height */
+  height: 4vh;
+  margin-right: 1vh;
+}
+
+.first-possibility-label, .second-possibility-label {
+  font-family: 'Times New Roman', serif;
+  font-size: 3vh; /* Font size relative to viewport height */
+  margin-right: 2vh;
+  font-weight: bold;
+}
+
+.dropbox-difficulties {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  font-size: 3vh; /* Font size relative to viewport height */
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+}
+
+button {
+  margin-top: 3vh;
+  border: none;
+  background-color: #1d6d86;
+  color: white;
+  padding: 1vh 4vh;
+  border-radius: 5vh;
+  font-family: 'Times New Roman', serif;
+  font-size: 4vh; /* Font size relative to viewport height */
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+button:active {
+  opacity: 0.45;
+}
+
+#apiResponse {
+  font-family: 'Times New Roman', serif;
+  font-size: 2vh; /* Font size relative to viewport height */
+  margin-top: 2vh;
+  white-space: pre-wrap; /* Preserve whitespace for JSON display */
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
