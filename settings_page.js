@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             difficulty: +difficultyValue
         };
 
-        fetch('http://172.17.251.113:8081/game/create', {
+        fetch('http://87.240.207.26:8081/game/create', {
             mode: "cors",
             method: "POST",
             headers: {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             const gId = data.gameId;
             sessionStorage.setItem('gameId', String(gId));
-            const getCardURL = `http://172.17.251.113:8081/game/getCards?id=${sessionStorage.getItem('gameId')}`;
+            const getCardURL = `http://87.240.207.26:8081/game/getCards?id=${sessionStorage.getItem('gameId')}`;
 
             return fetch(getCardURL, {
                 mode: "cors",
@@ -59,15 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
             sessionStorage.setItem('isActive', data.active);
             sessionStorage.setItem('cards', JSON.stringify(data.responseCard));
 
-            // Redirect based on board height
+             //Redirect based on board height
             if (requestBody.boardHeight === 4) {
-                window.location.replace('../html/memory_game_4x4.html');
+                window.location.replace('memory_game_4x4.html');
             } else {
-                window.location.replace('../html/memory_game_4x4.html');
+               window.location.replace('memory_game_4x4.html');
             }
         })
         .catch(error => {
             console.error('Error while fetching ID or cards:', error);
         });
     });
+    
 });
