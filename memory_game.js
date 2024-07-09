@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.replace('../html/setting_page.html');
     });
     
-    const apiUrl = 'http://172.17.251.113:8081/game/checkCard';
+    const apiUrl = 'http://87.240.207.26:8081/game/checkCard';
     let cardsData = JSON.parse(sessionStorage.getItem('cards'));
     let gameId = sessionStorage.getItem('gameId');
 
