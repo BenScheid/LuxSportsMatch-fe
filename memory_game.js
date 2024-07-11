@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         flippedCards.forEach(card => card.classList.remove('flipped'));
                         flippedCards = [];
                         isProcessing = false; 
-                    }, 1000); 
+                    }, 1500); 
                     return;  
                 }
     
@@ -148,7 +148,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
         const timerElement = document.querySelector('.timer');
         if (timerElement) {
-            timerElement.textContent = `Time: ${elapsedTime} seconds`;
+            const min = Math.floor(elapsedTime / 60);
+            const sec = elapsedTime % 60;
+            timerElement.textContent = `Time: ${min} min ${sec} sec`;
         }
     }
 
@@ -158,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayPopupWithTime() {
         const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
-        alert(`Congratulations! You finished the game in ${elapsedTime} seconds.`);
+        alert(`Congratulations! You finished the game in ${Math.floor(elapsedTime / 60)} minutes ${elapsedTime & 60} seconds.`);
     }
 
     startGame();

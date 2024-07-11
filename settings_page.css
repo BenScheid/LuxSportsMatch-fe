@@ -70,7 +70,7 @@ body {
 }
 
 button {
-  margin-top: 3vh;
+  margin-top: 1vh;
   border: none;
   background-color: #1d6d86;
   color: white;
@@ -81,6 +81,13 @@ button {
   cursor: pointer;
   text-decoration: none;
   transition: opacity 0.2s;
+}
+
+#errorDisplay{
+  height: 30px;
+}
+#errorMessageBox{
+  font-family: 'Times New Roman', serif;
 }
 
 button:hover {

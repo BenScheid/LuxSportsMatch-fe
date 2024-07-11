@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 sizeValue = radios.value;
             }
         });
+        if (sizeValue === null) {
+            document.getElementById('errorMessageBox').textContent = 'Please select a board size!';
+            return;
+        }
 
         const requestBody = {
             boardWidth: +sizeValue,
