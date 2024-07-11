@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const playAgain = document.getElementById('settingsButton');
-    playAgain.addEventListener('click', function(){
-        window.location.replace('../html/setting_page.html');
+    
+    document.getElementById('settingsButton').addEventListener('click', function(){
+        window.location.replace('settings_page.html');
     });
     
-    const apiUrl = 'http://87.240.207.26:8081/game/checkCard';
+    const apiUrl = 'https://api.lsm.scheid.click/game/checkCard';
     let cardsData = JSON.parse(sessionStorage.getItem('cards'));
     let gameId = sessionStorage.getItem('gameId');
 

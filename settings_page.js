@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             difficulty: +difficultyValue
         };
 
-        fetch('http://87.240.207.26:8081/game/create', {
+        fetch('https://api.lsm.scheid.click/game/create', {
             mode: "cors",
             method: "POST",
             headers: {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             const gId = data.gameId;
             sessionStorage.setItem('gameId', String(gId));
-            const getCardURL = `http://87.240.207.26:8081/game/getCards?id=${sessionStorage.getItem('gameId')}`;
+            const getCardURL = `https://api.lsm.scheid.click/game/getCards?id=${sessionStorage.getItem('gameId')}`;
 
             return fetch(getCardURL, {
                 mode: "cors",
