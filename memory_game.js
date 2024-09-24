@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.replace('settings_page.html');
     });
     
-    const apiUrl = 'https://api.lsm.scheid.click/game/checkCard';
+    const apiUrl = 'http://api.lsm.scheid.click:8081/game/checkCard';
     let cardsData = JSON.parse(sessionStorage.getItem('cards'));
     let gameId = sessionStorage.getItem('gameId');
 

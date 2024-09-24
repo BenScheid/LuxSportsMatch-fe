@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             difficulty: +difficultyValue
         };
 
-        fetch('https://api.lsm.scheid.click/game/create', {
+        fetch('http://api.lsm.scheid.click:8081/game/create', {
             mode: "cors",
             method: "POST",
             headers: {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             const gId = data.gameId;
             sessionStorage.setItem('gameId', String(gId));
-            const getCardURL = `https://api.lsm.scheid.click/game/getCards?id=${sessionStorage.getItem('gameId')}`;
+            const getCardURL = `http://api.lsm.scheid.click:8081/game/getCards?id=${sessionStorage.getItem('gameId')}`;
 
             return fetch(getCardURL, {
                 mode: "cors",
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             return response.json();
         })
-        .then(data => {
+        .then(data => {          
             sessionStorage.setItem('gameId', data.gameId);
             sessionStorage.setItem('width', data.width);
             sessionStorage.setItem('height', data.height);
@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
             sessionStorage.setItem('isActive', data.active);
             sessionStorage.setItem('cards', JSON.stringify(data.responseCard));
 
-             //Redirect based on board height
             if (requestBody.boardHeight === 4) {
                 window.location.replace('memory_game_4x4.html');
             } else {
