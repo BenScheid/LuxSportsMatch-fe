@@ -1,3 +1,6 @@
+const apiBaseURL = `https://api.lsm.scheid.click/game`;
+sessionStorage.setItem(`apiBaseURL`, apiBaseURL);
+
 document.addEventListener("DOMContentLoaded", function () {
     const fetchDataButton = document.getElementById("fetchDataButton");
     fetchDataButton.addEventListener("click", function () {

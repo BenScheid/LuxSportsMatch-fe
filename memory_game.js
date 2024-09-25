@@ -1,10 +1,11 @@
+const apiBaseURL = sessionStorage.getItem(`apiBaseURL`);
+
 document.addEventListener('DOMContentLoaded', function() {
     
     document.getElementById('settingsButton').addEventListener('click', function(){
         window.location.replace('settings_page.html');
     });
-    
-    const apiUrl = 'http://api.lsm.scheid.click:8081/game/checkCard';
+
     let cardsData = JSON.parse(sessionStorage.getItem('cards'));
     let gameId = sessionStorage.getItem('gameId');
 
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
             const payload = { gameId, index1, index2 };
     
-            fetch(apiUrl, {
+            fetch(apiBaseURL + `checkCard`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
