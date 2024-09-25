@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
             const payload = { gameId, index1, index2 };
     
-            fetch(apiBaseURL + `checkCard`, {
+            fetch(apiBaseURL + `/checkCard`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
